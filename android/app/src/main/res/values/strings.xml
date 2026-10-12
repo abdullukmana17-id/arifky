@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">tajwid</string>
+    <string name="title_activity_main">tajwid</string>
+    <string name="package_name">com.tajwid.app</string>
+    <string name="custom_url_scheme">com.tajwid.app</string>
+</resources>

@@ -1,0 +1,89 @@
+$color-hover: #F5F4EE;
+$color-active: #F3F2ED;
+$primary-sidebar-bg: #111111;
+
+$border-color: var(--bs-border-color-translucent);
+$header-border-color: var(--bs-border-color);
+
+$btn-icon-sm: 1.75rem;
+$btn-icon-md: 2rem;
+$btn-icon-lg: 2.5rem;
+
+$sl-primary-width: 18rem;
+$sl-secondary-width: 260px;
+$sl-primary-min-width: 48px;
+$sl-secondary-min-width: 48px;
+
+:root {
+    --sl-primary-width: #{$sl-primary-width};
+    --sl-secondary-width: #{$sl-secondary-width};
+    --sl-primary-min-width: #{$sl-primary-min-width};
+    --sl-secondary-min-width: #{$sl-secondary-min-width};
+}
+
+.sl-sidebar {
+    background-color: $primary-sidebar-bg !important;
+    max-width: var(--sl-primary-width) !important;
+    border-color: var(--bs-border-color) !important;
+}
+
+@media (min-width: 576px) {
+    .sl-sidebar {
+        transition: width 0.2s ease;
+    }
+
+    .sl-primary-layout {
+        display: flex;
+
+        >.sl-sidebar {
+            width: var(--sl-primary-width);
+            height: var(--sl-sidebar-height, 100vh);
+            position: sticky;
+            top: var(--sl-sidebar-top, 0);
+            flex-shrink: 0;
+
+            &.hide,
+            &.hide .offcanvas-body {
+                width: var(--sl-primary-min-width);
+
+                .navbar-brand {
+                    display: none;
+                }
+            }
+
+            &.hide ::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        >.sl-main-content {
+            flex-grow: 1;
+            min-width: 0;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .sl-secondary-layout {
+        display: flex;
+        flex-direction: row;
+
+        >.sl-sidebar {
+            width: var(--sl-secondary-width);
+            height: var(--sl-sidebar-height, 100vh);
+            position: sticky;
+            top: var(--sl-sidebar-top, 0);
+            flex-shrink: 0;
+
+            &.hide {
+                width: var(--sl-secondary-min-width);
+            }
+        }
+
+        >main {
+            flex-grow: 1;
+            min-width: 0;
+        }
+    }
+}

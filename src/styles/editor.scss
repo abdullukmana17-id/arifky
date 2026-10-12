@@ -1,0 +1,100 @@
+.editor {
+    font-family: $font-tertiary;
+
+    .container {
+        max-width: 46rem;
+    }
+
+    h1,
+    h3,
+    .btn {
+        font-family: $font-secondary;
+    }
+
+    &:nth-child(1) {
+        background-image: linear-gradient(90deg, rgb(240, 240, 240) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgb(240, 240, 240) 1px, rgba(0, 0, 0, 0) 1px);
+        background-size: 4rem 4rem;
+    }
+
+    .editor-split {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    .editor-panel {
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+    .editor-panel textarea {
+        width: 100%;
+        height: 100%;
+        resize: none;
+        padding: 1.5rem;
+        outline: none;
+    }
+
+
+    .editor-divider {
+        width: 1px;
+        flex-shrink: 0;
+        background-color: var(--bs-border-color);
+        cursor: col-resize;
+        position: relative;
+    }
+
+
+    .editor-divider:hover {
+        background-color: #6c757d;
+    }
+
+
+    /* area drag lebih besar agar mudah digunakan */
+    .editor-divider::before {
+        content: "";
+        position: absolute;
+        inset: 0 -5px;
+        cursor: col-resize;
+    }
+
+    .form-control::placeholder {
+        font-family: $font-secondary;
+        font-size: 1rem;
+        text-align: left;
+        line-height: normal;
+    }
+
+    .font-secondary {
+        font-family: $font-secondary;
+    }
+
+    .btn-stylish {
+        display: inline-block;
+        position: relative;
+        background-color: transparent !important;
+        text-decoration: none;
+        overflow: hidden;
+        z-index: 1;
+        border: 1px solid var(--bs-dark) !important;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $primary-color;
+            transform: translateX(-100%);
+            transition: all .3s;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: translateX(0);
+        }
+    }
+}

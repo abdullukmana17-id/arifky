@@ -1,0 +1,22 @@
+.testimoni {
+    font-family: $font-tertiary;
+
+    .container {
+        max-width: 46rem;
+    }
+
+    h1,
+    h3,
+    .btn {
+        font-family: $font-secondary;
+    }
+
+    &:nth-child(1) {
+        background-image: linear-gradient(90deg, rgb(240, 240, 240) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgb(240, 240, 240) 1px, rgba(0, 0, 0, 0) 1px);
+        background-size: 4rem 4rem;
+    }
+
+    p, .font-lpmq {
+        line-height: 1.25 !important;
+    }
+}

@@ -1,0 +1,41 @@
+.surah {
+    font-family: $font-tertiary;
+
+    .container {
+        max-width: 46rem;
+    }
+
+    h1,
+    h3,
+    .btn {
+        font-family: $font-secondary;
+    }
+
+    &:nth-child(1) {
+        background-image: linear-gradient(90deg, rgb(240, 240, 240) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(rgb(240, 240, 240) 1px, rgba(0, 0, 0, 0) 1px);
+        background-size: 4rem 4rem;
+    }
+
+    .form-control:focus {
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+
+        border-color: #d3ff4d;
+        outline: 0;
+
+        box-shadow: 0 0 0 .25rem rgba(211, 255, 77, .25);
+    }
+
+    .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .description:focus {
+        -webkit-line-clamp: unset;
+    }
+}

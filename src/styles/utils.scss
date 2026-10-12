@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Anthropic Sans";
+    src: url("../assets/fonts/Anthropic_Sans_Text.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Mono";
+    src: url("../assets/fonts/Anthropic Mono.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Anthropic Serif";
+    src: url("../assets/fonts/Anthropic_Serif_Text_Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LPMQ";
+    src: url("../assets/fonts/LPMQ.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Thuluth";
+    src: url("../assets/fonts/thuluth.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-sans {
+    font-family: "Anthropic Sans", sans-serif !important;
+}
+
+.font-serif {
+    font-family: "Anthropic Serif", serif !important;
+}
+
+.font-mono {
+    font-family: "Anthropic Mono", monospace !important;
+}
+
+.font-lpmq {
+    font-family: "LPMQ", serif !important;
+    font-weight: normal;
+    unicode-bidi: isolate;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "liga", "calt", "rlig";
+    line-height: 2.45;
+}
+
+.font-thuluth {
+    font-family: "Thuluth", serif !important;
+    font-weight: normal;
+    unicode-bidi: isolate;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "liga", "calt", "rlig";
+    line-height: 2.45;
+}
+
+.font-arabic {
+    direction: rtl;
+    line-height: 2.45;
+    unicode-bidi: isolate;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "liga", "calt", "rlig";
+}
+
+.font-lpmq-lg {
+    font-family: "LPMQ", serif !important;
+    font-size: 2rem;
+    line-height: 2.45;
+    direction: rtl;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "liga", "calt", "rlig";
+
+}
+
+.font-thuluth-lg {
+    font-family: "Thuluth", serif !important;
+    font-size: 2.2rem;
+    line-height: 2.45;
+    direction: rtl;
+    unicode-bidi: isolate;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "liga", "calt", "rlig";
+}
+
+:root {
+    --primary: #d3ff4d;
+    --primary-hover: #c2ef37;
+    --primary-active: #aed72a;
+    --primary-disabled: #e7ff9a;
+}
+
+.btn-primary {
+    color: #212529 !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary.hover {
+    color: #212529 !important;
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    color: #212529 !important;
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+    box-shadow: 0 0 0 .25rem rgba(211, 255, 77, .35) !important;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle {
+    color: #212529 !important;
+    background-color: var(--primary-active) !important;
+    border-color: var(--primary-active) !important;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+    color: #212529 !important;
+    background-color: var(--primary-disabled) !important;
+    border-color: var(--primary-disabled) !important;
+    opacity: .65;
+}
+
+.tooltip {
+    .tooltip-inner {
+        font-family: $font-secondary;
+        font-size: 1rem;
+        border-radius: 0 !important;
+        background-color: $primary-color !important;
+        color: var(--bs-body-color) !important;
+        border: 1px solid var(--bs-dark);
+    }
+    .tooltip-arrow::before {
+        display: none;
+    }
+}
